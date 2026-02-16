@@ -40,12 +40,6 @@ $primary: #000000;
     margin: 0 auto;
   }
 
-  @media (min-width: 768px) {
-    img {
-      max-width: 100%;
-    }
-  }
-
   .es-title {
     color: $primary;
     text-align: center;
@@ -124,6 +118,8 @@ $primary: #000000;
 
     &__container {
       padding-top: 20px;
+      padding-bottom: 20px;
+      display: -webkit-box;
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
@@ -148,6 +144,7 @@ $primary: #000000;
       bottom: 1%;
       left: 50%;
       font-size: 30px;
+      -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       color: $white;
       font-weight: 700;
@@ -165,7 +162,10 @@ $primary: #000000;
     }
 
     &__group {
+      display: -webkit-box;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
       flex-direction: column;
       gap: 30px;
       padding-top: 50px;
@@ -210,14 +210,20 @@ $primary: #000000;
     min-height: 300px;
 
     &__title {
-      font-size: 35px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      font-size: 24px;
     }
 
     &__container {
       position: absolute;
       top: 50%;
       left: 50%;
+      -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
+      width: 90%;
     }
 
     & .es-title {
@@ -380,16 +386,23 @@ $primary: #000000;
 
   .es-cross__single:hover .es-cross__link {
     background-color: $primary;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      background: #fff;
+      color: $primary;
+    }
   }
 
   .es-cross__packshot {
     margin-bottom: 16px;
     padding-bottom: 16px;
     width: 80%;
+
   }
 
   .es-cross__img {
-    // max-height: 90%;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
@@ -462,6 +475,19 @@ $primary: #000000;
       &__headline {
         left: 10%;
         bottom: 7%;
+
+        &--light {
+          font-size: 30px;
+        }
+
+        &--top {
+          font-weight: 700;
+          font-size: 30px;
+        }
+
+        &--big {
+          font-size: 40px;
+        }
       }
 
       &__headline--bottom {
@@ -472,10 +498,13 @@ $primary: #000000;
     }
 
 
-
     .es-effect {
       & .es-title {
         font-size: 40px;
+
+        &--bold {
+          font-size: 40px;
+        }
 
         &--small {
           font-size: 30px;
@@ -504,7 +533,6 @@ $primary: #000000;
 
   @media (min-width: 768px) {
     .es-kv {
-
       &__headline {
         font-weight: 700;
         left: 6%;
@@ -522,6 +550,21 @@ $primary: #000000;
         &--big {
           font-size: 45px;
         }
+      }
+    }
+
+    .es-ba {
+      &__group {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+        justify-self: center;
+        gap: 0;
+
+      }
+
+      &__left-subtitle {
+        padding-bottom: 20px;
       }
     }
 
@@ -568,6 +611,7 @@ $primary: #000000;
       width: 30%;
 
       &--left {
+        -webkit-box-align: start;
         align-items: flex-start;
       }
     }
@@ -592,58 +636,9 @@ $primary: #000000;
         min-height: 100px;
         font-size: 14px;
       }
-
-      &--short {
-        // margin-top: -50px;
-      }
     }
 
-    .es-ba {
-      display: flex;
-      column-gap: 30px;
 
-      &__inner {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-left: 50px;
-      }
-
-      &__group {
-        display: flex;
-        flex-direction: row;
-        gap: 0;
-        padding-top: 50px;
-        margin-bottom: 10px;
-      }
-
-      &__group-item {
-        min-width: 205px;
-        max-width: 271px;
-      }
-
-      &__left-title {
-        margin-bottom: 10px;
-        font-weight: 700;
-        font-size: 40px;
-        line-height: 100%;
-        text-transform: uppercase;
-        text-align: center;
-        color: $white;
-        text-shadow: 0 4px 16px rgba(0, 0, 0, 0.32);
-      }
-
-      &__left-subtitle {
-        font-size: 27px;
-        font-weight: 700;
-        color: $white;
-      }
-
-      &__right {
-        padding-top: 50px;
-      }
-    }
   }
 
   @media (min-width: 768px) {
@@ -657,6 +652,8 @@ $primary: #000000;
 
     .es-colors {
       &__container {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
         flex-direction: row;
         flex-wrap: nowrap;
         gap: 0px;
@@ -694,15 +691,10 @@ $primary: #000000;
 
       &__title {
         font-size: 67px;
-        margin-top: 21px;
       }
 
       &__container {
         width: 600px;
-      }
-
-      &__bg {
-        // max-width: 150%;
       }
     }
   }
@@ -721,6 +713,64 @@ $primary: #000000;
         &--big {
           font-size: 72px;
         }
+      }
+    }
+
+    .es-ba {
+      display: -webkit-box;
+      display: flex;
+      -webkit-column-gap: 30px;
+      -moz-column-gap: 30px;
+      column-gap: 30px;
+
+      &__inner {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        padding-left: 50px;
+      }
+
+      &__group {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+        gap: 0;
+        padding-top: 50px;
+        margin-bottom: 10px;
+      }
+
+      &__group-item {
+        min-width: 205px;
+        max-width: 271px;
+      }
+
+      &__left-title {
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 100%;
+        text-transform: uppercase;
+        text-align: center;
+        color: $white;
+        text-shadow: 0 4px 16px rgba(0, 0, 0, 0.32);
+      }
+
+      &__left-subtitle {
+        font-size: 27px;
+        font-weight: 700;
+        color: $white;
+      }
+
+      &__right {
+        padding-top: 50px;
       }
     }
 
@@ -755,6 +805,8 @@ $primary: #000000;
   @media (min-width: 1300px) {
 
     .es-ba {
+      -webkit-column-gap: 15px;
+      -moz-column-gap: 15px;
       column-gap: 15px;
 
       &__right {
