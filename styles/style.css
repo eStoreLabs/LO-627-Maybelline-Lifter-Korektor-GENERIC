@@ -612,11 +612,11 @@
   #es-rc #es-rc-content .es-steps__single-description {
     font-size: 31px;
   }
-  #es-rc #es-rc-content .es-footer,
-  #es-rc #es-rc-content .es-header {
-    background-color: #000000;
-    padding: 18px;
-    position: relative;
-    z-index: 1;
-  }
+}
+#es-rc #es-rc-content .es-footer,
+#es-rc #es-rc-content .es-header {
+  background-color: #000000;
+  padding: 18px;
+  position: relative;
+  z-index: 1;
 }/*# sourceMappingURL=style.css.map */
