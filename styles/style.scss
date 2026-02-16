@@ -61,6 +61,13 @@ $primary: #000000;
     }
   }
 
+  .es-header,
+  .es-footer {
+    &__logo {
+      max-width: 188px;
+    }
+  }
+
   .es-title--bold {
     font-weight: 700;
   }
@@ -87,11 +94,13 @@ $primary: #000000;
       bottom: 5%;
       left: 10%;
       color: $white;
+      line-height: 1;
       text-transform: uppercase;
       text-align: center;
       width: -webkit-max-content;
       width: -moz-max-content;
       width: max-content;
+      text-shadow: 0 4px 28px rgba(0, 0, 0, 0.6);
 
       &--light {
         font-weight: 500;
@@ -167,7 +176,7 @@ $primary: #000000;
       bottom: 5%;
       right: 5%;
       font-weight: 700;
-      font-size: 32px;
+      font-size: 25px;
       text-transform: uppercase;
       color: $white;
     }
@@ -380,7 +389,7 @@ $primary: #000000;
   }
 
   .es-cross__img {
-    max-height: 100%;
+    // max-height: 90%;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
@@ -412,7 +421,9 @@ $primary: #000000;
   .es-cross__desc {
     font-family: $font-secondary;
     text-align: center;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 140%;
     margin-bottom: 32px;
     color: $black;
 
@@ -424,11 +435,11 @@ $primary: #000000;
   .es-cross__link {
     margin: 0;
     line-height: 35px;
-    font-size: 20px;
+    font-size: 18px;
     background: $black;
     color: $white;
     text-decoration: none;
-    padding: 16px 40px;
+    padding: 9px 40px;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
@@ -492,9 +503,31 @@ $primary: #000000;
   }
 
   @media (min-width: 768px) {
+    .es-kv {
+
+      &__headline {
+        font-weight: 700;
+        left: 6%;
+        bottom: 5%;
+
+        &--light {
+          font-size: 40px;
+        }
+
+        &--top {
+          font-weight: 700;
+          font-size: 30px;
+        }
+
+        &--big {
+          font-size: 45px;
+        }
+      }
+    }
+
     .es-title {
       font-weight: 700;
-      font-size: 54px;
+      font-size: 41px;
       line-height: 130%;
       text-transform: uppercase;
       text-align: center;
@@ -504,6 +537,7 @@ $primary: #000000;
     .es-cross {
       position: relative;
       padding-top: 70px;
+      padding-bottom: 50px;
 
       &__title {
         font-size: 60px;
@@ -540,14 +574,27 @@ $primary: #000000;
 
     .es-cross__name {
       text-align: left;
+
+      &--2 {
+        text-align: center;
+      }
     }
 
     .es-cross__desc {
-      min-height: 170px;
+      min-height: 90px;
 
       &--left {
         text-align: left;
         color: $white;
+      }
+
+      &--2 {
+        min-height: 100px;
+        font-size: 14px;
+      }
+
+      &--short {
+        // margin-top: -50px;
       }
     }
 
@@ -560,6 +607,7 @@ $primary: #000000;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-left: 50px;
       }
 
       &__group {
@@ -567,14 +615,18 @@ $primary: #000000;
         flex-direction: row;
         gap: 0;
         padding-top: 50px;
-        padding-left: 50px;
-        margin-bottom: 25px;
+        margin-bottom: 10px;
+      }
+
+      &__group-item {
+        min-width: 205px;
+        max-width: 271px;
       }
 
       &__left-title {
         margin-bottom: 10px;
         font-weight: 700;
-        font-size: 34px;
+        font-size: 40px;
         line-height: 100%;
         text-transform: uppercase;
         text-align: center;
@@ -583,7 +635,7 @@ $primary: #000000;
       }
 
       &__left-subtitle {
-        font-size: 20px;
+        font-size: 27px;
         font-weight: 700;
         color: $white;
       }
@@ -596,6 +648,8 @@ $primary: #000000;
 
   @media (min-width: 768px) {
     .es-kv {
+      margin-top: -65px;
+
       &__headline--bottom {
         font-size: 70px;
       }
@@ -606,6 +660,15 @@ $primary: #000000;
         flex-direction: row;
         flex-wrap: nowrap;
         gap: 0px;
+      }
+
+      &__title {
+        font-size: 68px;
+        color: #fff;
+      }
+
+      &__container {
+        padding-top: 0;
       }
     }
 
@@ -620,25 +683,59 @@ $primary: #000000;
       }
 
       &__single-title {
-        font-size: 44px;
+        font-size: 50px;
+        top: 14px;
+        right: 27px;
       }
     }
 
-
-
     .es-effect {
-      min-height: 500px;
+      min-height: 450px;
+
+      &__title {
+        font-size: 67px;
+        margin-top: 21px;
+      }
+
+      &__container {
+        width: 600px;
+      }
+
+      &__bg {
+        // max-width: 150%;
+      }
     }
   }
 
   @media (min-width: 1024px) {
+    .es-kv {
+
+      &__headline {
+        left: 6%;
+        bottom: 3%;
+
+        &--top {
+          font-size: 40px;
+        }
+
+        &--big {
+          font-size: 72px;
+        }
+      }
+    }
+
     .es-steps {
       & .es-title {
-        font-size: 60px;
+        font-size: 56px;
       }
     }
 
     .es-cross {
+
+      &--1 {
+        padding-bottom: 60px;
+      }
+
       &__title {
         font-weight: 700;
         font-size: 40px;
@@ -658,25 +755,39 @@ $primary: #000000;
   @media (min-width: 1300px) {
 
     .es-ba {
-      column-gap: 80px;
+      column-gap: 15px;
+
+      &__right {
+        padding-top: 25px;
+      }
     }
 
     .es-cross {
       &__packshot {
         width: 100%;
-        margin-bottom: 45px;
+        margin-bottom: 0px;
 
         &--2 {
           margin-bottom: 0;
         }
       }
 
+      &__img {
+        &--2 {
+          max-width: 115%;
+        }
+      }
+
       &__single {
-        min-width: 250px;
+        max-width: 218px;
       }
 
       &__name {
-        font-size: 30px;
+        font-size: 24px;
+
+        &--2 {
+          margin-top: 25px;
+        }
       }
 
       &__container {
@@ -686,7 +797,7 @@ $primary: #000000;
 
     .es-steps {
       &__single {
-        max-width: 390px;
+        max-width: 290px;
       }
 
       &__container {
@@ -694,7 +805,7 @@ $primary: #000000;
       }
 
       &__single-description {
-        font-size: 24px;
+        font-size: 31px;
       }
     }
 
@@ -703,7 +814,7 @@ $primary: #000000;
   .es-footer,
   .es-header {
     background-color: $black;
-    padding: 24px;
+    padding: 18px;
     position: relative;
     z-index: 1;
   }
