@@ -826,12 +826,33 @@ $primary: #000000;
 
       &__img {
         &--2 {
-          max-width: 115%;
+          max-width: 87%;
         }
       }
 
       &__single {
         max-width: 218px;
+        position: relative;
+      }
+
+      &__single--left:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 277px;
+        top: 0;
+        right: -15px;
+        background: $white;
+      }
+
+      &__single--left-2:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 277px;
+        top: 5px;
+        right: -15px;
+        background: $white;
       }
 
       &__name {

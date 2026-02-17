@@ -589,10 +589,29 @@
     margin-bottom: 0;
   }
   #es-rc #es-rc-content .es-cross__img--2 {
-    max-width: 115%;
+    max-width: 87%;
   }
   #es-rc #es-rc-content .es-cross__single {
     max-width: 218px;
+    position: relative;
+  }
+  #es-rc #es-rc-content .es-cross__single--left:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 277px;
+    top: 0;
+    right: -15px;
+    background: #ffffff;
+  }
+  #es-rc #es-rc-content .es-cross__single--left-2:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 277px;
+    top: 5px;
+    right: -15px;
+    background: #ffffff;
   }
   #es-rc #es-rc-content .es-cross__name {
     font-size: 24px;
