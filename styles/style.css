@@ -495,7 +495,7 @@
   #es-rc #es-rc-content .es-effect {
     min-height: 450px;
   }
-  #es-rc #es-rc-content .es-effect__title {
+  #es-rc #es-rc-content .es-effect .es-title--bold {
     font-size: 67px;
   }
   #es-rc #es-rc-content .es-effect__container {
@@ -595,6 +595,9 @@
     max-width: 218px;
     position: relative;
   }
+  #es-rc #es-rc-content .es-cross__single--2 {
+    max-width: 236px;
+  }
   #es-rc #es-rc-content .es-cross__single--left:not(:last-child)::after {
     content: "";
     position: absolute;
@@ -608,7 +611,7 @@
     content: "";
     position: absolute;
     width: 2px;
-    height: 277px;
+    height: 277 px;
     top: 5px;
     right: -15px;
     background: #ffffff;

@@ -632,6 +632,10 @@ $primary: #000000;
         color: $white;
       }
 
+      &--short {
+        // margin-top: -25px;
+      }
+
       &--2 {
         min-height: 100px;
         font-size: 14px;
@@ -689,8 +693,10 @@ $primary: #000000;
     .es-effect {
       min-height: 450px;
 
-      &__title {
-        font-size: 67px;
+      & .es-title {
+        &--bold {
+          font-size: 67px;
+        }
       }
 
       &__container {
@@ -833,6 +839,10 @@ $primary: #000000;
       &__single {
         max-width: 218px;
         position: relative;
+
+        &--2 {
+          max-width: 236px;
+        }
       }
 
       &__single--left:not(:last-child)::after {
@@ -849,7 +859,7 @@ $primary: #000000;
         content: "";
         position: absolute;
         width: 2px;
-        height: 277px;
+        height: 277 px;
         top: 5px;
         right: -15px;
         background: $white;
