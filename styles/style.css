@@ -482,6 +482,7 @@
   }
   #es-rc #es-rc-content .es-colors__container {
     padding-top: 0;
+    padding-bottom: 0;
   }
   #es-rc #es-rc-content .es-steps__container {
     flex-direction: row;
